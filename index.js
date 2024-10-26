@@ -199,8 +199,8 @@ checkout.addEventListener("click", () => {
   const withdrawalOption = retiradaBtn.checked ? "Retirada" : "Entrega";
   const cartItems = cart
     .map((item) => {
-      return `${item.name} Quantidade: 
-       (${item.qtd}) Preço: ${item.price} |`;
+      return `${item.name} \n Quantidade:(${item.qtd})  
+       Preço: ${item.price} |`;
     })
     .join("");
 
@@ -218,7 +218,7 @@ const message = encodeURIComponent(
   `${saboresMensagem} \n`
   
 );
-const phone = "86994384189";
+const phone = "86998001733";
 
 
   window.open(
