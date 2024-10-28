@@ -232,17 +232,17 @@ const phone = "86998001733";
 
 function checkRestaurantOpen() {
   const today = new Date();
-  const diaHj = today.getUTCDay()
-  const data = new Date();
-  const hora = data.getHours();
-  // return hora >= 15 && hora < 20 && diaHj ;
+  const diaHj = today.getDay(); // 0 (domingo) a 6 (sábado)
+  const hora = today.getHours();
 
+  // Fechado às segundas ou fora do horário das 18:00 às 22:00
   if (diaHj === 1 || hora < 18 || hora >= 22) {
     return false; // Fechado
   }
 
   return true; // Aberto
 }
+
 
 const span = document.querySelector("#data-span");
 const isOpen = checkRestaurantOpen();
